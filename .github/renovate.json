@@ -6,7 +6,10 @@
     "github>wcm-io/renovate-config:automerge-testing"
   ],
   "ignoreDeps": [
-    "org.apache.maven.release:*",
-    "org.codehaus.plexus:*"
+    "org.apache.maven.release:maven-release-api",
+    "org.apache.maven.release:maven-release-oddeven-policy",
+    "org.apache.maven:maven-artifact",
+    "org.codehaus.plexus:plexus-component-metadata",
+    "org.codehaus.plexus:plexus-component-annotations"
   ]
 }
