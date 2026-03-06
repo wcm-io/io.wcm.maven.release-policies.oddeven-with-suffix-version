@@ -32,7 +32,7 @@ class OddEvenWithSuffixVersionVersionPolicyTest {
   @Test
   void testGetReleaseVersion() throws PolicyException, VersionParseException {
     VersionPolicyRequest request = new VersionPolicyRequest()
-        .setVersion("1.10.1-2.17.12-SNAPSHOT");
+      .setVersion("1.10.1-2.17.12-SNAPSHOT");
 
     VersionPolicyResult result = new OddEvenWithSuffixVersionVersionPolicy().getReleaseVersion(request);
 
@@ -42,7 +42,7 @@ class OddEvenWithSuffixVersionVersionPolicyTest {
   @Test
   void testGetReleaseVersion_NotSnapshot() throws PolicyException, VersionParseException {
     VersionPolicyRequest request = new VersionPolicyRequest()
-        .setVersion("1.10.1-2.17.12");
+      .setVersion("1.10.1-2.17.12");
 
     VersionPolicyResult result = new OddEvenWithSuffixVersionVersionPolicy().getReleaseVersion(request);
 
@@ -52,7 +52,7 @@ class OddEvenWithSuffixVersionVersionPolicyTest {
   @Test
   void testGetDevelopmentVersion() throws PolicyException, VersionParseException {
     VersionPolicyRequest request = new VersionPolicyRequest()
-        .setVersion("1.10.0-2.17.12");
+      .setVersion("1.10.0-2.17.12");
 
     VersionPolicyResult result = new OddEvenWithSuffixVersionVersionPolicy().getDevelopmentVersion(request);
 
@@ -62,7 +62,7 @@ class OddEvenWithSuffixVersionVersionPolicyTest {
   @Test
   void testGetDevelopmentVersion_Snapshot() throws PolicyException, VersionParseException {
     VersionPolicyRequest request = new VersionPolicyRequest()
-        .setVersion("1.10.1-2.17.12-SNAPSHOT");
+      .setVersion("1.10.1-2.17.12-SNAPSHOT");
 
     VersionPolicyResult result = new OddEvenWithSuffixVersionVersionPolicy().getDevelopmentVersion(request);
 

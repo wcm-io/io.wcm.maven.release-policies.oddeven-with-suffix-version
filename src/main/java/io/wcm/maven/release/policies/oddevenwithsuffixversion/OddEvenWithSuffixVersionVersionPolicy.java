@@ -47,7 +47,7 @@ public class OddEvenWithSuffixVersionVersionPolicy implements VersionPolicy {
 
     // increment only main version
     String nextMainVersion = oddEvenVersionPolicy.getReleaseVersion(new VersionPolicyRequest()
-        .setVersion(version.getMainVersion() + "-SNAPSHOT")).getVersion();
+      .setVersion(version.getMainVersion() + "-SNAPSHOT")).getVersion();
     return new VersionPolicyResult().setVersion(
         new VersionWithSuffixVersion(nextMainVersion, version.getSuffixVersion(), false).toString());
   }
@@ -58,7 +58,7 @@ public class OddEvenWithSuffixVersionVersionPolicy implements VersionPolicy {
 
     // return next main version with snapshot
     String nextMainVersion = StringUtils.removeEnd(oddEvenVersionPolicy.getDevelopmentVersion(new VersionPolicyRequest()
-        .setVersion(version.getMainVersion())).getVersion(), "-SNAPSHOT");
+      .setVersion(version.getMainVersion())).getVersion(), "-SNAPSHOT");
     return new VersionPolicyResult().setVersion(
         new VersionWithSuffixVersion(nextMainVersion, version.getSuffixVersion(), true).toString());
   }
